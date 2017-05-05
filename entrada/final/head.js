@@ -1,0 +1,1 @@
+document.write('<header><ul><li><a href="materiales.html">Materiales</a></li><li><a href="programas.html">Programas</a></li><li><a href="aplicaciones.html">Aplicaciones</a></li><li><a href="relacionados.html">Relacionados</a></li></ul></header>');

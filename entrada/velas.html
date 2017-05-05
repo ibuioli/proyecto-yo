@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Jugando en la Noche</title>
+    <link href='../estilo.css' rel='stylesheet' type='text/css'>
+    <script src="../jquery-1.6.2.min.js" language="javascript" type="text/javascript"></script>
+    <script src="../jquery-ui-1.8.16.custom.min.js" language="javascript" type="text/javascript"></script>
+    <script src="primero.js" language="javascript" type="text/javascript"></script>
+    <script src="../jquery.validate.js" language="javascript" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript">
+    function playSound(soundfile) {
+    document.getElementById("dummy").innerHTML=
+    "<audio autoplay=\"autoplay\"><source src=\""+soundfile+"\" type=\"audio/ogg\" /></audio>";
+    }
+    </script>
+</head>
+
+<body onmousemove="raton(event)">
+    <a href="#" class="ayuda">Ayuda</a>
+    <p class="payuda">Se necesita luz para poder ver en la oscuridad</p>
+    <script src="../memo.js" language="javascript" type="text/javascript"></script> 
+	<script src="../acerca.js" language="javascript" type="text/javascript"></script> 
+	<script src="../contacto.js" language="javascript" type="text/javascript"></script>
+    <div id="contiene">
+    <p id="relato">Sin resultados, se enfurece. Se lanza contra el hombre, amenz&aacute;ndolo y propin&aacute;ndole golpes. Pierde totalmente la calma, el control, hasta que un escandaloso <a href="final/espineta.html">sonido</a> lo hace estremecer.</p>
+    <div id="agregados">
+    <p class="algo_p" id="un_parrafo"><a href="#" onclick="playSound('img/el_sonido.ogg');">Escape</a></p><p class="ya_no_hay" id="un_parrafo2">Ya no hay salida</p>
+	<img src="img/luz.png" alt="Luz" id="luces" />
+	</div>
+	<img src="img/vela.png" alt="Vela" class="sencilla" />
+    </div>
+    <div class="solo_luz">
+    </div>
+    <script src="../footer.js" language="javascript" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript">
+		function raton(e) {
+  		x = e.clientX;
+  		x = parseFloat(x/screen.width)*9;
+  		x = Math.ceil(x);
+  		urt = x-3;
+  		urti = x-2;
+  		document.getElementById('luces').style.opacity="."+x;
+  		document.getElementById('un_parrafo').style.opacity="."+urti;
+  		document.getElementById('un_parrafo2').style.opacity="."+urt;
+		}
+	 </script>
+   <span id="dummy"></span>
+</body>
+</html>

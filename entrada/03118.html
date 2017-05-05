@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Ligeti "for Harpsichord"</title>
+    <link href='../estilo.css' rel='stylesheet' type='text/css'>
+    <script src="../jquery-1.6.2.min.js" language="javascript" type="text/javascript"></script>
+    <script src="../jquery-ui-1.8.16.custom.min.js" language="javascript" type="text/javascript"></script>
+    <script src="primero.js" language="javascript" type="text/javascript"></script>
+    <script src="../jquery.validate.js" language="javascript" type="text/javascript"></script>
+</head>
+
+<body>
+	 <audio autoplay="autoplay" loop="loop">
+       <source src="img/continuum.ogg" type="audio/ogg" />
+    </audio>
+    <a href="#" class="ayuda">Ayuda</a>
+    <p class="payuda">El nombre de la imagen de fondo</p>
+    <script src="../memo.js" language="javascript" type="text/javascript"></script> 
+	<script src="../acerca.js" language="javascript" type="text/javascript"></script> 
+	<script src="../contacto.js" language="javascript" type="text/javascript"></script>
+    <div id="contiene">
+    <input type="text" name="ingreses" value="" id="rak" autofocus />
+    <p id="relato">Se dirige, muy oportuno, a <a href="sepia.html">investigar</a> el responsable autor de la carta. Muy persuasivo, consigue informaci&oacute;n aparente de un coleccionista de instrumentos musicales. Aparentemente, un fan&aacute;tico de Ligeti.</p>
+	<img src="img/espineta.png" alt="Espineta" class="sencilla" />
+    </div>
+    <script src="../footer.js" language="javascript" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript">
+    		$("#rak").fadeOut(50).delay(2000).fadeIn(100)
+            $("#rak").focus();
+            $(document).keypress( function() {
+            if(document.getElementById('rak').value == "CONTINUUM" || document.getElementById('rak').value == "continuum" || document.getElementById('rak').value == "Continuum"){
+                $(".sencilla").delay(1000).fadeOut(800);
+                $("#rak").delay(1000).fadeOut(700);
+                $("#relato").delay(1000).fadeIn(500);
+      }
+      });
+    </script>
+</body>
+</html>

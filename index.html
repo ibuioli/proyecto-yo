@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Proyecto Yo - Los Misterios de la Avenida 27</title>
+    <meta name="description" content="Proyecto Yo Los Misterios de la Avenida 27 Sitio web Experimental de Acertijos Informáticos" />
+    <meta name="keywords" content="proyecto,yo,proyectoyo,misterios,avenida,27,experimental,acertijos,informática,informáticos,HTML5,CSS3,JavaScript,jQuery" />
+    <meta name="author" content="Ignacio Buioli" />
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <link href='estilo.css' rel='stylesheet' type='text/css'>
+    <script src="jquery-1.6.2.min.js" language="javascript" type="text/javascript"></script>
+    <script src="jquery-ui-1.8.16.custom.min.js" language="javascript" type="text/javascript"></script>
+    <script src="jquery.validate.js" language="javascript" type="text/javascript"></script>
+</head>
+
+<body>
+    <script src="memo.js" language="javascript" type="text/javascript"></script>
+	<script src="acerca.js" language="javascript" type="text/javascript"></script>  
+    <script src="contacto.js" language="javascript" type="text/javascript"></script>
+        <div id="titulo1" title="Esto no es Flash" alt="Esto no es Flash">
+         <h1>Proyecto</h1><span class="yo">YO</span>
+        </div>
+        <div id="titulo2" title="Esto no es Flash" alt="Esto no es Flash">
+         <h2 class="misterios">Los Misterios de</h2><h2 class="avenida">la Avenida</h2><span class="a27">27</span>
+        </div>
+        <a href="entrada/index.html" class="ingresar"><span class="i">I</span><span class="n">n</span><span class="g">g</span><span class="r">r</span><span class="e">e</span><span class="s">s</span><span class="a">a</span><span class="r">r</span></a>
+        <script src="footer.js" language="javascript" type="text/javascript"></script>
+			<audio autoplay="autoplay">
+            <source src="arc/tipear.ogg" type="audio/ogg" />
+        </audio>
+    <script language="javascript" type="text/javascript">
+        var IE='\v'=='v';
+        
+        if(IE){
+            document.location.href="ie/no_funciona.html"
+        }else{
+        $(document).ready( function() {
+            
+            $("#form_contacto").validate();
+
+            $("#titulo1").fadeIn(1000).fadeOut(1000).fadeIn(1000).fadeOut(1000);
+            $("#titulo2").delay(4100).fadeIn(1000);
+            $("footer").delay(6500).animate({bottom: "-2px"},300);
+            $("footer").delay(2000).animate({bottom: "-40px"},300);
+            function runEt() {
+                $(".misterios").animate({opacity: ".39"},800);
+                $(".misterios").animate({opacity: ".99"},800);
+                $(".avenida").animate({opacity: ".39"},800);
+                $(".avenida").animate({opacity: ".99"},800);
+                $(".a27").animate({opacity: ".19"},70);
+                $(".a27").animate({opacity: ".99"},80, runEt);
+            }
+            runEt();
+            $(".ingresar").delay(6000).fadeIn(30);
+            $(".i").delay(7000).fadeIn(90);
+            $(".n").delay(7100).fadeIn(90);
+            $(".g").delay(7200).fadeIn(90);
+            $(".r").delay(7300).fadeIn(90);
+            $(".e").delay(7400).fadeIn(90);
+            $(".s").delay(7500).fadeIn(90);
+            $(".a").delay(7600).fadeIn(90);
+            $(".r").delay(7700).fadeIn(90);      
+            $("footer").mouseenter( function() {
+		$("footer").animate({bottom: "-2px"},300);
+	    }).mouseleave(function(){
+                $("footer").animate({bottom: "-40px"},300);
+            });
+            $(".contacto").click( function() {
+                $("#memo").fadeOut(100);
+                $("#acerca").fadeOut(100);
+                $("#contacto").fadeIn(500);
+	    })
+            $(".acerca").click( function() {
+                $("#memo").fadeOut(100);
+                $("#contacto").fadeOut(100);
+                $("#acerca").fadeIn(500);
+	    })
+            $(".memo").click( function() {
+                $("#acerca").fadeOut(100);
+                $("#contacto").fadeOut(100);
+                $("#memo").fadeIn(500);
+	    })
+            $("#cerrar_contacto").click( function() {
+                $("#contacto").fadeOut(500);
+	    })
+            $("#cerrar_acerca").click( function() {
+                $("#acerca").fadeOut(500);
+	    })
+            $("#cerrar_memo").click( function() {
+                $("#memo").fadeOut(500);
+	    })
+	});
+        }
+    </script>
+</body>
+</html>

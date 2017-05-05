@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Escala Crom&aacute;tica</title>
+    <link href='../estilo.css' rel='stylesheet' type='text/css'>
+    <script src="../jquery-1.6.2.min.js" language="javascript" type="text/javascript"></script>
+    <script src="../jquery-ui-1.8.16.custom.min.js" language="javascript" type="text/javascript"></script>
+    <script src="primero.js" language="javascript" type="text/javascript"></script>
+    <script src="../jquery.validate.js" language="javascript" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript">
+    function playSound(soundfile) {
+    document.getElementById("dummy").innerHTML=
+    "<audio autoplay=\"autoplay\"><source src=\""+soundfile+"\" type=\"audio/ogg\" /></audio>";
+    }
+    </script>
+</head>
+
+<body>
+	<div class="formas">
+	<p>El error en la armon&iacute;a no es m&aacute;s que una simple cuesti&oacute;n de ordenar correctamente cada sector.</p>
+	<input type="text" name="cdefgab" value="gcedfba" id="recos" />
+	</div>
+    <a href="#" class="ayuda">Ayuda</a>
+    <p class="payuda">Musicalmente hablando, hay algo que no est&aacute; en orden</p>
+    <script src="../memo.js" language="javascript" type="text/javascript"></script> 
+	<script src="../acerca.js" language="javascript" type="text/javascript"></script> 
+	<script src="../contacto.js" language="javascript" type="text/javascript"></script>
+    <div id="contiene">
+    <p id="relato" class="relato3">Un informe, una carta formal, sobre la mesa, le muestra simplemente: "<a href="03113.html">Clarinete</a>, <a href="03115.html">Dulzaina</a>, <a href="03118.html">Espineta</a>, <a href="03114.html">Flauta</a>, <a href="03119.html">Guitarra</a>, <a href="03117.html">Acorde&oacute;n</a>, <a href="03116.html">Bandone&oacute;n</a>..."</p>
+    <div id="agregados">
+	<p class="nota_C todo_nota">C</p>
+	<p class="nota_D todo_nota">D</p>
+	<p class="nota_E todo_nota">E</p>
+	<p class="nota_F todo_nota">F</p>
+	<p class="nota_G todo_nota">G</p>
+	<p class="nota_A todo_nota">A</p>
+	<p class="nota_B todo_nota">B</p>
+	<a href="#" class="croma cromo1" onclick="playSound('img/C.ogg');"></a>
+	<a href="#" class="croma cromo2" onclick="playSound('img/D.ogg');"></a>
+	<a href="#" class="croma cromo3" onclick="playSound('img/E.ogg');"></a>
+	<a href="#" class="croma cromo4" onclick="playSound('img/F.ogg');"></a>
+	<a href="#" class="croma cromo5" onclick="playSound('img/G.ogg');"></a>
+	<a href="#" class="croma cromo6" onclick="playSound('img/A.ogg');"></a>
+	<a href="#" class="croma cromo7" onclick="playSound('img/B.ogg');"></a>
+	</div>
+	<img src="img/03.png" alt="Tercera" class="sencilla" />
+    </div>
+    <script src="../footer.js" language="javascript" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript">
+    var a = 0;		
+			$(".croma").click( function() {
+			a++;
+			if(a == 7){
+			$(".formas").fadeIn(300);	
+			}
+			});
+			
+			$(document).keypress( function() {
+			if(document.getElementById('recos').value == "cdefgab" || document.getElementById('recos').value == "CDEFGAB"){
+				$(".formas").fadeOut(300);			
+				$(".sencilla").delay(900).fadeOut(300);
+				setTimeout("location.href='cdefgab.html'", 2000);
+				}
+				});
+    </script>
+    <span id="dummy"></span>
+</body>
+</html>
